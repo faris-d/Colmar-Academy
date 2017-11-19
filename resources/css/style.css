@@ -143,7 +143,7 @@ header {
 .campus .right-column {
   width: 40%;
   height: auto;
-
+  padding: 2rem 0rem;
 }
 
 .campus .right-column .text-container {
@@ -159,26 +159,30 @@ header {
 .campus .item {
   display: flex;
   flex-direction: row;
-  border: solid grey .25rem;
-  width: 100%;
-
-
+  margin-bottom: 1rem;
 }
 
 .campus .item .text-container {
   width: 65%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  padding: 0rem;
+  padding-left: 1rem;
+}
+
+.campus .item .text-container h4, p {
+  margin: 0rem;
+  margin-bottom: .5rem;
+
 }
 
 .campus .item .image-container {
   width: 35%;
-  padding: 1rem;
 
 }
 .campus .item img {
-  width:100%;
+  width: 100%;
 }
 
 /* courses/learning */
@@ -225,5 +229,73 @@ header {
 
 /* thesis */
 
+.thesis .container {
+  width: 100%;
+
+}
+
+.thesis h3 {
+  font-size: 2rem;
+  padding: 2rem 0rem;
+  margin: 0rem;
+  line-height: 2.15rem;
+  width: 100%;
+  text-align: center;
+}
+
+.thesis .left-column {
+  width: 60%;
+  padding: 0rem 1.5rem 2rem 1.5rem;
+
+}
+
+
+.thesis .right-column {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 0rem;
+}
+
+.thesis-item {
+  width:100%;
+  display: flex;
+  flex-direction: row;
+
+  padding: 0rem;
+}
+
+.thesis-item .text-container {
+  flex-basis: 65%;
+
+}
+
+.thesis-item .image-container  {
+  flex-basis: 35%;
+  padding: 1rem;
+}
+
+.thesis-item img {
+  width: 100%;
+}
 
 /* footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid grey .05rem;
+}
+
+.signature {
+  padding: 1rem 0rem 0rem 1.5rem;
+
+}
+
+.terms-privacy {
+  padding: 1rem 1.5rem 0rem 0rem;
+}
+
+.terms-privacy span {
+  margin-left: .75rem
+}
