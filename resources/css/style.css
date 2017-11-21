@@ -3,6 +3,8 @@
 body {
   font-size: 16px;
   width: 64rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: rgb(72,72,72);
 }
 
 .main-container {
@@ -33,7 +35,7 @@ header {
 }
 
 .logo .academy {
-  color: grey;
+  color: rgb(169,169,169);
 }
 
 .desktop ul {
@@ -55,7 +57,7 @@ header {
 /* main banner */
 
 .banner {
-  background-color: grey;
+  background-color: rgb(215, 217, 220);
 }
 
 .banner .container {
@@ -86,29 +88,45 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  flex-shrink: 2;
+
 }
 
 .banner h2 {
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0rem;
+  font-synthesis: weight;
+  font-stretch: extra-expanded;
 }
 
-.banner h4 {
-  font-weight: bold;
+.banner p {
+  font-weight: 500;
   font-size: 1.25rem;
+  margin-bottom: 2.25rem;
+
 }
 
 .button {
   padding: .5rem 0px;
   width: 100%;
-  background-color: black;
+  background-color: rgb(95,95, 107);
   color: white;
+  font-weight: normal;
   text-align: center;
+  padding: .6rem 0rem;
+
 }
 
 .button span {
     padding: .5rem 0px;
+    font-size: 1.15rem;
+}
+
+.button:hover {
+  background-color: rgb(100, 47, 117);
+  transition-property: background-color;
+  transition-duration: 750ms;
 }
 
 /* campus */
@@ -119,7 +137,7 @@ header {
 
 .campus .container {
   display: flex;
-
+  padding-bottom: 2rem;
 }
 
 .campus .left-column {
@@ -127,13 +145,13 @@ header {
 }
 
 .campus .left-column h3 {
-  Font-weight: bold;
+  font-weight: bold;
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 
-.campus .left-column span {
-  margin: 2rem 0rem;
+.campus .left-column p {
+  padding-bottom: 2rem;
 }
 
 .campus .right-column {
@@ -189,7 +207,14 @@ header {
 }
 
 .link {
-  color: turquoise;
+  color: rgb(66, 145, 174);
+  font-weight: 300;
+}
+
+.link:hover {
+  font-weight: bolder;
+  font-size: 1.15rem;
+  transition: 250ms ease-in-out 50ms;
 }
 
 
@@ -202,10 +227,16 @@ header {
   width: 100%;
 }
 
+.reference {
+  padding: 1rem 0rem 2rem 0rem;
+  font-weight: 300;
+}
+
 /* courses/learning */
+
 .courses {
   width: 100%;
-  background-color: grey;
+  background-color: rgb(215, 217, 220);
 
 }
 
@@ -220,6 +251,7 @@ header {
 }
 
 .courses .container {
+  padding-bottom: 2rem;
   display: flex;
   width: auto;
   flex-wrap: wrap;
@@ -233,11 +265,12 @@ header {
   display: flex;
   flex-direction:column;
   margin: 1rem;
+  background-color: white;
 }
 
 .course .text-container{
   width: 100%;
-
+  padding-left: 1rem;
 }
 
 .course .text-container h4 {
@@ -316,12 +349,31 @@ header {
   width: 100%;
 }
 
+.thesis .right-column h4 {
+  font-size: 1.25rem;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
+}
+
+.thesis .right-column p {
+  margin: 0rem;
+}
+
+.thesis .left-column h4 {
+  font-size: 1.5rem;
+  margin: 1.5rem 0rem .5rem 0rem;
+}
+
+
+
 /* footer */
 
 footer {
   display: flex;
   justify-content: space-between;
   border-top: solid grey .05rem;
+  font-weight: 300;
+  font-style:italic;
 }
 
 .signature {
@@ -339,7 +391,7 @@ footer {
 
 /* mobile media queries */
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 460px) {
 
   /* header (mobile)*/
 
@@ -420,16 +472,23 @@ footer {
   }
 
   .button {
-    background-color: grey;
+    background-color: rgb(215, 217, 220);
     padding: .5rem 0px;
 
   }
 
   .button span {
     padding: .5rem 33%;
-    background-color: blue;
     margin-bottom: 2rem;
+    background-color: #A0A0A0;
+    transition-property: font-weight;
+  }
 
+  .button:hover {
+    font-weight: 700;
+
+    background-color: rgb(215, 217, 220);
+    transition: 750ms ease-in 150ms;
   }
 
   /* campus (mobile) */
@@ -445,7 +504,8 @@ footer {
 
   .campus .item {
     width: 100%;
-    flex-direction: column;;
+    flex-direction: column;
+    margin-bottom: 0rem;
   }
 
   .campus .item .image-container {
@@ -481,20 +541,20 @@ footer {
     padding-bottom: 1rem;
   }
 
-  .courses .image-container, h5, p {
+  .courses .image-container, .courses h5, .courses p {
     display: none;
     margin: 0rem;
     padding: 0rem;
   }
 
-.course {
-  padding: 0rem;
-  margin: 0rem;
+  .course {
+    padding: 0rem;
+    margin: 0rem;
 
-}
+  }
 
   .courses .text-container {
-    background-color: grey;
+    background-color: rgb(215, 217, 220);
     margin: 0rem;
     padding: 0rem;
   }
@@ -506,6 +566,7 @@ footer {
     border: .25rem solid white;
 
   }
+
 
   /* thesis (mobile) */
 
@@ -529,7 +590,7 @@ footer {
     display: none;
 
   }
-  
+
   footer .signature {
     padding: 1rem 0rem 1rem 1.5rem;
     margin-top: 1.5rem
